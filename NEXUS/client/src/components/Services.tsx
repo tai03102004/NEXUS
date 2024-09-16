@@ -3,7 +3,7 @@ import { BiSearchAlt } from "react-icons/bi";
 import { RiHeart2Fill } from "react-icons/ri";
 
 
-import { ServiceCard } from "../Interface/ServiceCard.tsx"
+import type { ServiceCard } from "../Interface/ServiceCard.tsx"
 
 
 const ServiceCard = (props: ServiceCard) => {
