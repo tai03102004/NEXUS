@@ -3,5 +3,4 @@ export interface InputProps {
     name?: string,
     type: string,
     value?: string,
-    handleChange: (event: React.ChangeEvent<HTMLInputElement>, name: string) => void;
 }

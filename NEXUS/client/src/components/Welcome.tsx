@@ -4,21 +4,20 @@ import { BsInfoCircle } from "react-icons/bs";
 import { Loader} from "./";
 import { InputProps } from "../Interface/InputPros";
 
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 
 import Aos from "aos";
 import 'aos/dist/aos.css';
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
-const Input = ({ placeholder, name="" , type="", value="", handleChange }: InputProps) => {
+const Input = ({ placeholder , type="", value="" }: InputProps) => {
     return (
         <input
             placeholder={placeholder}
             type = {type}
             value = {value}
             step= "0.0001"
-            onChange={(e) => handleChange(e, name)}
             className = "my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism "
         />
     );
@@ -26,20 +25,7 @@ const Input = ({ placeholder, name="" , type="", value="", handleChange }: Input
 
 
 function Welcome() {
-    const [formData, setFormData] = useState({
-        addressTo: "",
-        amount: "",
-        keyword: "",
-        message: ""
-    });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name: string) => {
-        setFormData((prevState) => ({
-            ...prevState,
-            [name]: e.target.value
-        }));
-    };
-    
     const connectWallet = () => {
 
     }
@@ -112,10 +98,10 @@ function Welcome() {
                         </div>
                     </div>
                     <div className="p-5 sm:w-96 w-full flex flex-col justify-start items-center blue-glassmorphism">
-                        <Input placeholder="Address To" name="addressTo" type="text" handleChange={handleChange} />
-                        <Input placeholder="Amount (ETH)" name="amount" type="number" handleChange={handleChange} />
-                        <Input placeholder="Keyword (Gif)" name="keyword" type="text" handleChange={handleChange} />
-                        <Input placeholder="Enter Message" name="message" type="text" handleChange={handleChange} />
+                        <Input placeholder="Address To" name="addressTo" type="text" />
+                        <Input placeholder="Amount (ETH)" name="amount" type="number" />
+                        <Input placeholder="Keyword (Gif)" name="keyword" type="text" />
+                        <Input placeholder="Enter Message" name="message" type="text" />
 
                         <div className="h-[1px] w-full bg-gray-400 my-2" />
 

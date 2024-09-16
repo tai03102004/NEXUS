@@ -1,6 +1,6 @@
 import dummyData from "../utils/dummyData.ts";
 
-import { TransactionCard } from "../Interface/TransactionCard";
+import type { TransactionCard } from "../Interface/TransactionCard";
 
 import useFetch from "../hooks/useFetch.tsx";
 
