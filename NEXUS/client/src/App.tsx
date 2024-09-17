@@ -1,4 +1,4 @@
-import {Navbar, Welcome, Footer, Services, Transactions, Info,InfoNFT} from "./components/index.ts";
+import {Navbar, Welcome, Footer, Artists,Collections, Transactions, Info,InfoNFT} from "./components/index.ts";
 
 function App() {
 
@@ -9,7 +9,8 @@ function App() {
           <Navbar/>
           <Welcome/>
         </div>
-        <Services/>
+        <Artists/>
+        <Collections/>
         <Info/>
         <Transactions/>
         <InfoNFT/>
