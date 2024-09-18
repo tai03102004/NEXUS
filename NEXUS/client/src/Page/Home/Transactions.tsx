@@ -1,8 +1,8 @@
-import dummyData from "../utils/dummyData.ts";
+import dummyData from "../../utils/dummyData.ts";
 
-import type { TransactionCard } from "../Interface/TransactionCard";
+import type { TransactionCard } from "../../Interface/TransactionCard.tsx";
 
-import useFetch from "../hooks/useFetch.tsx";
+import useFetch from "../../hooks/useFetch.tsx";
 
 const TransactionCard = (props: TransactionCard) => {
     const { addressTo, addressFrom, timestamp = "", message = "", keyword = "", amount = "", url = ""} = props;

@@ -1,4 +1,4 @@
-import { TextCard } from "../Interface/TextCard";
+import { TextCard } from "../../Interface/TextCard";
 
 
 const InfoCart = (props: TextCard) => {

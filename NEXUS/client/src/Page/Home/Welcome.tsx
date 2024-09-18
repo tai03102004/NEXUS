@@ -1,8 +1,8 @@
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 
-import { Loader} from "./";
-import { InputProps } from "../Interface/InputPros";
+import { Loader} from "../../components";
+import { InputProps } from "../../Interface/InputPros";
 
 import {useEffect} from "react";
 

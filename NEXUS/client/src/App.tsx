@@ -1,21 +1,18 @@
-import {Navbar, Welcome, Footer, Artists,Collections, Transactions, Info,InfoNFT} from "./components/index.ts";
+import { Routes,BrowserRouter, Route } from "react-router-dom";
+import Home from "./Page/Home/Home.tsx";
+import LayoutDefault from "./layout/LayoutDefault.tsx";
 
 function App() {
 
   return (
     <>
-      <div className = "min-h-screen">
-        <div className = "gradient-bg-welcome">
-          <Navbar/>
-          <Welcome/>
-        </div>
-        <Artists/>
-        <Collections/>
-        <Info/>
-        <Transactions/>
-        <InfoNFT/>
-        <Footer/>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<LayoutDefault />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

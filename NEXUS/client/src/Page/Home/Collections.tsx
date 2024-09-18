@@ -1,4 +1,4 @@
-import type { TextCard } from "../Interface/TextCard.tsx"
+import type { TextCard } from "../../Interface/TextCard.tsx"
 
 
 const ServiceCard = (props: TextCard) => {

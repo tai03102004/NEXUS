@@ -16,21 +16,19 @@ const NarbarItems = (props: NavbarItemProps) => {
     );
 }   
 
+
 function NavBar() {
     const [toggleMenu, setToggleMenu] = useState(false);
 
     return (
         <nav className = "w-full flex md:justify-center justify-between items-center pt-[25px] mx-auto">
             <div className = "md:flex-[0.5] flex-initial justify-center items-center">
-                <img src={logo} alt="logo"  className = "w-32 cursor-pointer" />
+                <img src={logo} alt="logo"  className = "w-32 cursor-pointer"/>
             </div>
             <ul className="text-white md:flex hidden font-[500] text-[16px] list-none flex-row justify-between items-center flex-initial">
                 {["Market", "Exchange", "Tutorials","Wallets"].map((item, index) => (
                     <NarbarItems key={item + index} title={item} classProps={undefined}/>
-                ))}
-                <li className = "bg-[#2952e3] py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-                    Login
-                </li>      
+                ))}  
             </ul>
             <div className="flex relative">
                 {
