@@ -3,5 +3,7 @@ export interface TextCard {
     name?: string;
     link: string;      
     title: string;    
-    subtitle: string
+    subtitle?: string
+    title2?: string;
+    subtitle2?:string;
 }

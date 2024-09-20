@@ -1,0 +1,32 @@
+const artistRanking = [
+    {title2 : "1", avatar : "./images/Artists/Artist_1.png" ,name : "Jaydon Ekstrom Bothman" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "2", avatar : "./images/Artists/Artist_2.png" ,name : "Ruben Carder" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "3", avatar : "./images/Artists/Artist_3.png" ,name : "Alfredo Septimus" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "4", avatar : "./images/Artists/Artist_4.png" ,name : "Davis Franci" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "5", avatar : "./images/Artists/Artist_5.png" ,name : "Livia Rosser" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "6", avatar : "./images/Artists/Artist_6.png" ,name : "Kianna Donin" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "7", avatar : "./images/Artists/Artist_7.png" ,name : "Phillip Lipshutz" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "8", avatar : "./images/Artists/Artist_8.png" ,name : "Maria Rosser" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "9", avatar : "./images/Artists/Artist_9.png" ,name : "Kianna Stanton" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "10", avatar : "./images/Artists/Artist_10.png" ,name : "Angel Lubin" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "11", avatar : "./images/Artists/Artist_11.png" ,name : "Allison Torff" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "12", avatar : "./images/Artists/Artist_12.png" ,name : "Davis Workman" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "13", avatar : "./images/Artists/Artist_13.png" ,name : "Lindsey Lipshutz" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "14", avatar : "./images/Artists/Artist_14.png" ,name : "Lydia Culhane" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "15", avatar : "./images/Artists/Artist_15.png" ,name : "Rayna Bator" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "16", avatar : "./images/Artists/Artist_16.png" ,name : "Jocelyn Westervelt" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "17", avatar : "./images/Artists/Artist_17.png" ,name : "Marilyn Torff" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "18", avatar : "./images/Artists/Artist_18.png" ,name : "Skylar Levin" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "19", avatar : "./images/Artists/Artist_19.png" ,name : "Terry Dorwart" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2 : "20", avatar : "./images/Artists/Artist_20.png" ,name : "Randy Carder" , title : "+1.41%", subtitle : "602" , subtitle2 : "12.4 ETH"},
+    {title2: "21", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH",avatar : "https://static.live.templately.com/agency/2022/10/60cf70c3-team-11.png",},
+    {title2: "22", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/2cb1323c-team-77.png",},
+    {title2: "23", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/49e19a6c-team-88.png",},
+    {title2: "24", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/f7b801ea-team-44.png",},
+    {title2: "25", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/cee455e7-team-66.png",},
+    {title2: "26", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/9f5e8509-team-22.png",},
+    {title2: "27", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/7ffb14ba-team-5.png",},
+    {title2: "28", name : "Adem Parker",title: "+1.41%",subtitle2 : "12.4 ETH", avatar : "https://static.live.templately.com/agency/2022/10/ddaa11f6-team99.png",}
+]
+
+export default artistRanking;

@@ -5,6 +5,7 @@ import logo from "../../images/logo.png";
 
 import { NavbarItemProps } from "../Interface/NavbarItemProps.tsx"
 import {useState} from "react";
+import { Link } from "react-router-dom";
 
 const NarbarItems = (props: NavbarItemProps) => {
     const {title = "", classProps = ""} = props;
@@ -23,11 +24,15 @@ function NavBar() {
     return (
         <nav className = "w-full flex md:justify-center justify-between items-center pt-[25px] mx-auto">
             <div className = "md:flex-[0.5] flex-initial justify-center items-center">
-                <img src={logo} alt="logo"  className = "w-32 cursor-pointer"/>
+                <Link to={"/"}>
+                    <img src={logo} alt="logo"  className = "w-32 cursor-pointer"/>
+                </Link>
             </div>
             <ul className="text-white md:flex hidden font-[500] text-[16px] list-none flex-row justify-between items-center flex-initial">
-                {["Market", "Exchange", "Tutorials","Wallets"].map((item, index) => (
-                    <NarbarItems key={item + index} title={item} classProps={undefined}/>
+                {["Native Token", "NFT Marketpace", "Tutorials","Wallets"].map((item, index) => (
+                    <Link to={item.replace(/\s+/g, '_')}>
+                        <NarbarItems key={item + index} title={item} classProps={undefined}/>
+                    </Link>
                 ))}  
             </ul>
             <div className="flex relative">
@@ -43,7 +48,9 @@ function NavBar() {
                                 <AiOutlineClose onClick={() => setToggleMenu(false)}/>
                             </li>
                             {["Market", "Exchange", "Tutorials","Wallets"].map((item, index) => (
-                                <NarbarItems key={item + index} title={item} classProps="my-2 text-lg"/>
+                                <Link to={item.replace(/\s+/g, '_')}>
+                                    <NarbarItems key={item + index} title={item} classProps="my-2 text-lg"/>
+                                </Link>
                             ))}
                         </ul>
                     )

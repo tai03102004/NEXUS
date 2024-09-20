@@ -8,6 +8,7 @@ import {useEffect} from "react";
 
 import Aos from "aos";
 import 'aos/dist/aos.css';
+import { useWeb3Modal } from "@web3modal/ethers/react";
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
@@ -26,9 +27,6 @@ const Input = ({ placeholder , type="", value="" }: InputProps) => {
 
 function Welcome() {
 
-    const connectWallet = () => {
-
-    }
     const handleSUBMIT = () => {
 
     }
@@ -36,6 +34,8 @@ function Welcome() {
     useEffect(() => {
         Aos.init();
     },[]);
+
+    const { open } = useWeb3Modal();
 
     return (
         <div className = "flex w-full justify-center">
@@ -49,10 +49,11 @@ function Welcome() {
                     </p>
                     <button
                         type="button"
-                        onClick={connectWallet}
+                        onClick={() => open()}
                         className="flex flex-row justify-center items-center py-2 my-5 bg-[#2952e3] rounded-full cursor-pointer hover:bg-[#2546bd]"
                     >
                         <p className="text-white text-base font-semibold">
+
                             Connect Wallet
                         </p>
                     </button>
