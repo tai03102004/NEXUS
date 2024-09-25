@@ -9,12 +9,12 @@ const ServiceCard = (props: TextCard) => {
             <div className = "white-glassmorphism m-2 cursor-pointer hover:shadow-xl rounded-[10px] p-[25px] relative hover:bg-[#99E54D] group">
                 <div className="flex items-center mb-[15px]">
                     <div className="bg-[#414B61] rounded-[50%] mr-[15px] overflow-hidden">
-                        <img className="w-[35px] h-[auto]" object-cover src={avatar}/>
+                        <img loading="lazy" className="w-[35px] h-[auto]" object-cover src={avatar}/>
                     </div>
                     <div className="text-[#CDD2DC] font-genos text-[14px] font-[500] group-hover:text-black">{name}</div>
                 </div>
                 <div className="mb-[25px] overflow-hidden">
-                    <img className="" object-cover src={link}/>
+                    <img loading="lazy" className="" object-cover src={link}/>
                 </div>
                 <div className="">
                     <div className="text-white font-genos text-[22px] mb-[5px] font-[700]">{title}</div>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ServiceCard from "../../middlewares/ServiceCard";
-import nftsHome from "../../data/nftsHome";
+import nftsMarketPlace from "../../data/nftsMarketPlace";
 
 
 
@@ -14,15 +14,17 @@ function Colelctions () {
                     </h1>
                 </div>
                 <div className="grid lg:grid-cols-4 grid-cols-2 gap-[20px] my-[60px]" data-aos="fade-up" data-aos-duration = "1600">
-                        {nftsHome.map((nfts,index) => (
+                        {nftsMarketPlace.slice(12).map((nfts,index) => (
+                            <Link to={`/NFT_Marketpace/${nfts.id}`} >
                                 <ServiceCard 
                                         key={index}
                                         avatar={nfts.avatar}
                                         name="jimena_stark"
                                         link={nfts.link}
                                         title={nfts.title}
-                                        subtitle="Price: "
+                                        subtitle="Price: " 
                                 />
+                            </Link>
                         ))}
                 </div>
                 <Link to={"/NFT_Marketpace"}>

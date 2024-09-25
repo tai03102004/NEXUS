@@ -26,6 +26,9 @@ body {
     background-color: #312d2d;
 }
 
+.gradient-bg-card {
+    background: linear-gradient(127deg, hsla(0, 0%, 100%, .16) 17.35%, hsla(0, 0%, 85%, .04) 76.2%);
+}
 
 .gradient-bg-info {
     background-color: #0f0e13;

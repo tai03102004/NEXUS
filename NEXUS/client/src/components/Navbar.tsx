@@ -11,29 +11,57 @@ const NarbarItems = (props: NavbarItemProps) => {
     const {title = "", classProps = ""} = props;
     
     return (
-        <li className={`mx-4 cursor-pointer ${classProps}`}>
+        <li className={`mx-4 cursor-pointer md:text-[17px] text-[16px] font-genos font-semibold ${classProps} hover:text-[#fe9595]`} >
             {title}
         </li>
     );
 }   
 
-
 function NavBar() {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const [isOpen, setIsOpen] = useState(false); 
+
+    const menuItem = ["Native Token", "NFT Marketpace", "Earn","Wallets"];
 
     return (
         <nav className = "w-full flex md:justify-center justify-between items-center pt-[25px] mx-auto">
             <div className = "md:flex-[0.5] flex-initial justify-center items-center">
                 <Link to={"/"}>
-                    <img src={logo} alt="logo"  className = "w-32 cursor-pointer"/>
+                    <img loading="lazy" src={logo} alt="logo"  className = "w-32 cursor-pointer"/>
                 </Link>
             </div>
             <ul className="text-white md:flex hidden font-[500] text-[16px] list-none flex-row justify-between items-center flex-initial">
-                {["Native Token", "NFT Marketpace", "Tutorials","Wallets"].map((item, index) => (
-                    <Link to={item.replace(/\s+/g, '_')}>
-                        <NarbarItems key={item + index} title={item} classProps={undefined}/>
-                    </Link>
-                ))}  
+                {
+                    menuItem.map((item, index) => {
+                        if(item === "Earn") {
+                            return (
+                                <li
+                                    key={index}
+                                    className="relative mx-4 cursor-pointer md:text-[17px] text-[16px] font-genos font-ssemibold hover:text-[#fe9595]"
+                                    onMouseEnter={() => setIsOpen(true)}
+                                    onMouseLeave={() => {setIsOpen(false);}}
+                                > Earn
+                                    { isOpen &&
+                                        <ul className="absolute border border-[#4f4f4f] rounded-[10px] w-[150px]">
+                                            <Link to="/earn/staking">
+                                                <li className="hover:bg-gray-200 hover:rounded-[10px] px-2 py-1 text-[14px] p-[10px]">Simple Staking</li>
+                                            </Link>
+                                            <Link to="/earn/mining">
+                                                <li className="hover:bg-gray-200 hover:rounded-[10px] px-2 py-1 text-[14px] p-[10px]">Liquidity Mining</li>
+                                            </Link>
+                                        </ul>
+                                    }
+                                </li>
+                            )
+                        } else {
+                            return (
+                                <Link to={item.replace(/\s+/g, '_')}>
+                                    <NarbarItems key={item + index} title={item} classProps={undefined}/>
+                                </Link>
+                            )
+                        }
+                    })
+                }
             </ul>
             <div className="flex relative">
                 {
@@ -47,7 +75,7 @@ function NavBar() {
                             <li className = "text-xl w-full my-2">
                                 <AiOutlineClose onClick={() => setToggleMenu(false)}/>
                             </li>
-                            {["Market", "Exchange", "Tutorials","Wallets"].map((item, index) => (
+                            {menuItem.map((item, index) => (
                                 <Link to={item.replace(/\s+/g, '_')}>
                                     <NarbarItems key={item + index} title={item} classProps="my-2 text-lg"/>
                                 </Link>

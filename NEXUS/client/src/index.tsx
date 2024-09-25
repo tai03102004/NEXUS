@@ -10,11 +10,11 @@ import { createWeb3Modal, defaultConfig } from "@web3modal/ethers/react";
 
 // 2. Set chains (Sepolia Testnet)
 const sepolia = {
-  chainId: 11155111, // Sepolia Testnet chainId
+  chainId: 11155111,
   name: "Sepolia",
   currency: "ETH",
   explorerUrl: 'https://sepolia.etherscan.io',
-  rpcUrl: 'https://rpc.sepoliaeth.com', // SepoliaETH RPC URL
+  rpcUrl: 'https://rpc.sepoliaeth.com', 
 }
 
 // 3. Create a metadata object

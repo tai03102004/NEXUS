@@ -8,7 +8,7 @@ const InfoCart = (props: TextCard) => {
     return (
         <>
             <div className="md:w-[80%] bg-[#24266B] p-[50px] my-[100px] rounded-[15px]">
-                <img 
+                <img    loading="lazy"
                         decoding="async" 
                         width="100" 
                         height="100" 

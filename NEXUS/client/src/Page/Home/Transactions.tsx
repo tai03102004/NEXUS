@@ -9,8 +9,6 @@ const TransactionCard = (props: TransactionCard) => {
 
     const gifUrl = useFetch({ keyword: keyword });
 
-    console.log(gifUrl);
-
     return (
         <div className="bg-[#181918] m-4 flex flex-1 
             2xl:min-w-[450px] 
@@ -46,6 +44,7 @@ const TransactionCard = (props: TransactionCard) => {
                     }
                 </div>
                 <img 
+                    loading = "lazy"
                     src = {gifUrl || url}
                     alt = "gif"
                     className = "w-full h-64 2x:h-96 rounded-md showdow-lg object-cover"

@@ -22,7 +22,7 @@ const ItemAnswer = ({ title, subtitle, index, activeIndex, onClick }: AnswerProp
                             {title}
                         </div>
                     }
-                    <img src="/images/plus.png" className="w-[20px] h-[20px] mr-[12px]"/>
+                    <img loading="lazy" src="/images/plus.png" className="w-[20px] h-[20px] mr-[12px]"/>
                 </div>
                 {
                     isActive && 

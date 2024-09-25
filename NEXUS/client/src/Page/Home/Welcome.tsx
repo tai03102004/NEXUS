@@ -4,11 +4,10 @@ import { BsInfoCircle } from "react-icons/bs";
 import { Loader} from "../../components";
 import { InputProps } from "../../Interface/InputPros";
 
-import {useEffect} from "react";
+import { useWeb3Modal, useWeb3ModalAccount } from "@web3modal/ethers/react";
 
-import Aos from "aos";
-import 'aos/dist/aos.css';
-import { useWeb3Modal } from "@web3modal/ethers/react";
+import { shortenAddress } from "../../utils/shortenAddress";
+
 
 const companyCommonStyles = "min-h-[70px] sm:px-0 px-2 sm:min-w-[120px] flex justify-center items-center border-[0.5px] border-gray-400 text-sm font-light text-white";
 
@@ -27,15 +26,16 @@ const Input = ({ placeholder , type="", value="" }: InputProps) => {
 
 function Welcome() {
 
-    const handleSUBMIT = () => {
-
-    }
-
-    useEffect(() => {
-        Aos.init();
-    },[]);
-
     const { open } = useWeb3Modal();
+    const { address, isConnected, chainId, status } = useWeb3ModalAccount();
+    console.log(isConnected, chainId);
+
+
+    const handleConnectWallet = async () => {
+        
+    };
+
+    handleConnectWallet;
 
     return (
         <div className = "flex w-full justify-center">
@@ -47,16 +47,18 @@ function Welcome() {
                     <p className="text-left mt-5 text-white font-light md:2-9/12 w-11/12 text-base">
                         Explore the crypto world. Buy and sell cryptocurrencies easily on Krypto.
                     </p>
-                    <button
-                        type="button"
-                        onClick={() => open()}
-                        className="flex flex-row justify-center items-center py-2 my-5 bg-[#2952e3] rounded-full cursor-pointer hover:bg-[#2546bd]"
-                    >
-                        <p className="text-white text-base font-semibold">
+                    {
+                        status === "disconnected" && <button
+                                type="button"
+                                onClick={() => open()}
+                                className="flex flex-row justify-center items-center py-2 my-5 bg-[#2952e3] rounded-full cursor-pointer hover:bg-[#2546bd]"
+                            >
+                                <p className="text-white text-base font-semibold">
 
-                            Connect Wallet
-                        </p>
-                    </button>
+                                    Connect Wallet
+                                </p>
+                            </button>
+                    }
                     <div className="grid sm:grid-cols-3 grid-cols-2 w-full mt-10">
                         <div className={`rounded-tl-2xl ${companyCommonStyles}`}>
                             Reliability
@@ -90,7 +92,9 @@ function Welcome() {
                             <div className="">
                                 <p className="text-white font-light text-sm">
                                     {/* {shortenAddress(currentAccount)} */}
-                                    Address
+                                    { status === "connected" ?
+                                        shortenAddress(address!)  : "Address"
+                                    }
                                 </p>
                                 <p className="text-white font-semibold text-lg mt-1">
                                     Ethereum
@@ -110,7 +114,7 @@ function Welcome() {
                             false ? (
                                 <Loader/>
                             ) : (
-                                <button type="button" onClick={handleSUBMIT}
+                                <button type="button" onClick={handleConnectWallet}
                                     className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
                                 >
                                     Send Now

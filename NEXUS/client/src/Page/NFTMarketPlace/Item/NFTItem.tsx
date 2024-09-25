@@ -1,7 +1,15 @@
+import nftsMarketPlace from "../../../data/nftsMarketPlace";
 import Answer from "./Answer";
 import Headline from "./Headline";
 
+import { useParams } from "react-router-dom";
+
 const NFTItem = () => {
+
+  const {id} = useParams();
+  const nfts = nftsMarketPlace[parseInt(id!)];
+
+
   return (
     <>
       <div className="gradient-bg-welcome">
@@ -11,7 +19,8 @@ const NFTItem = () => {
             <div className="md:w-[50%] w-full md:mr-[50px] mb-[30px] md:mb-0">
               <div className="bg-[#1F2228] rounded-[10px]">
                 <img
-                  src="/images/bear.png"
+                  loading="lazy"
+                  src= {nfts.link}
                   className="w-full h-auto md:h-[500px] object-cover p-[10px] md:p-[20px]"
                   alt="Pink Universe"
                 />
@@ -19,7 +28,7 @@ const NFTItem = () => {
             </div>
             <div className="md:w-[50%] w-full">
               <h2 className="text-white text-[24px] md:text-[30px] font-genos font-semibold mb-[20px] md:mb-[30px]">
-                Pink Universe
+                {nfts.title}
               </h2>
               <div className="flex mb-[20px] md:mb-[30px] flex-wrap">
                 <div className="text-white text-[14px] font-bold mr-[10px] mb-[10px] md:mb-0 bg-[#53C343] px-[15px] py-[8px] rounded-[10px]">
@@ -37,6 +46,7 @@ const NFTItem = () => {
               <div className="flex mb-[30px]">
                 <div className="mr-[10px]">
                   <img
+                    loading="lazy"
                     src="/images/Artists/Artist_1.png"
                     className="w-[40px] md:w-[45px] object-cover aspect-square"
                   />
@@ -50,6 +60,7 @@ const NFTItem = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex">
                     <img
+                      loading="lazy"
                       src="/images/Artists/Artist_2.png"
                       className="w-[40px] md:w-[45px] object-cover aspect-square"
                     />

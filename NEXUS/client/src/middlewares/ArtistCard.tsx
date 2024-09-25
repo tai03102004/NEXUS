@@ -6,7 +6,7 @@ const ArtistCard = (props: TextCard) => {
     return (
         <div className = "flex items-center white-glassmorphism m-2 cursor-pointer hover:shadow-xl rounded-[120px] p-[25px] relative hover:bg-[#99E54D] group">
             <div className="bg-[#414B61] rounded-[50%] w-[95px] mr-[25px] overflow-hidden">
-                <img className="w-[95px]" object-cover src={link}/>
+                <img loading="lazy" className="w-[95px]" object-cover src={link}/>
             </div>
             <div className="">
                 <div className="text-white font-genos text-[22px] font-[600]">{title}</div>

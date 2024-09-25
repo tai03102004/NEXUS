@@ -12,11 +12,11 @@ function Artists () {
                             Most Popular Artists
                         </h1>
                     </div>
-                    <Link to={"/artist"}>
+                    <Link to={"/ranking"}>
                             <div className="flex items-center justify-center bg-[#000] rounded-[10px] group hover:bg-[#53C343] transition-all duration-300 ease-[cubic-bezier(0.2, 1, 0.3, 1)]">
                                     <div className="px-[36px] py-[20px] text-[24px] text-[#53C343] font-genos font-bold group-hover:text-white transition-all duration-300 ease-[cubic-bezier(0.2, 1, 0.3, 1)]" data-aos="fade-left" data-aos-duration = "1200">
                                             <div className="flex">
-                                                <img src="./images/RocketLaunch.svg" width={24}/>
+                                                <img loading="lazy" src="./images/RocketLaunch.svg" width={24}/>
                                                 <p className="ml-[15px]">View Rankings</p>
                                             </div>
                                     </div>
@@ -24,7 +24,7 @@ function Artists () {
                     </Link>
                 </div>
                 <div className="grid lg:grid-cols-3 grid-cols-1 gap-[20px] my-[60px]" data-aos="fade-up" data-aos-duration = "1600">
-                    {artistRanking.slice(21,28).map((item,index) => (
+                    {artistRanking.slice(20,28).map((item,index) => (
                         <Link to={`artist/${item.title2}`}>
                             <ArtistCard 
                                 key = {index}

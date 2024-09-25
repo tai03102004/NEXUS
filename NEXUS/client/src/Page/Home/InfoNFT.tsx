@@ -7,7 +7,7 @@ const InfoItemNFT = (props: TextCard) => {
     return (
         <>
             <div className= "my-[80px]">
-                <img 
+                <img    loading="lazy"
                         decoding="async" 
                         width="50" 
                         height="auto" 

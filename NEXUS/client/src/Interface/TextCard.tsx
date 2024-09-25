@@ -1,4 +1,5 @@
 export interface TextCard {
+    id?: string;
     avatar?: string;
     name?: string;
     link: string;      

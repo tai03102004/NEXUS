@@ -11,7 +11,7 @@ const ArtistItem = (props: TextCard) => {
                     <div className="bg-[#000] text-center rounded-[50%] px-[5px] mr-[15px]">
                         <p className="text-white font-bold text-[14px] text-center">{title2}</p>
                     </div>
-                    <img src={link} alt={name} className="w-[50px] h-[50px] rounded-full mr-4" />
+                    <img loading="lazy" src={link} alt={name} className="w-[50px] h-[50px] rounded-full mr-4" />
                     <p className="text-white font-bold">{name}</p>
                 </div>
                 <div className="flex justify-between w-full">
