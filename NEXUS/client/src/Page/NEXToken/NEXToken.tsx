@@ -5,7 +5,7 @@ import Marketplace from './Marketplace';
 
 function NEXToken() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="gradient-bg-welcome min-h-screen">
       <main className="container mx-auto py-8 px-4">
         <TokenInfo />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">

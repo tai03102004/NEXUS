@@ -25,7 +25,7 @@ function Headline({setSearchQuery} : HeadlineProps) {
                         <AiOutlineSearch className= "mx-3 cursor-pointer" fontSize={20}/>
                     </form>
                 </div>
-            </div>
+            </div> 
         </>
     )
 }

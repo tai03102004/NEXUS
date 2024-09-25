@@ -14,31 +14,29 @@ function Section2({ searchQuery }: Section2Props) {
 
         const [currentPage, setCurrentPage] = useState(1);
 
-        const totalPages = Math.ceil(nftsMarketPlace.length/ITEMS_PER_PAGE);
+        const filterNFTs = nftsMarketPlace.filter(nft => 
+                nft.title.toLowerCase().includes(searchQuery.toLowerCase())
+        );
 
-        const displayNFTs = nftsMarketPlace.slice(
+        const totalPages = Math.ceil(filterNFTs.length/ITEMS_PER_PAGE);
+
+        const displayNFTs = filterNFTs.slice(
                 (currentPage - 1) * ITEMS_PER_PAGE,
                 currentPage * ITEMS_PER_PAGE
-        )
-
+        );
+        
         const handleNextPage = () => {
-                if(currentPage < totalPages) {
-                        setCurrentPage(currentPage + 1)
+                if (currentPage < totalPages) {
+                        setCurrentPage(currentPage + 1);
                 }
-        }              
-
+        };
+        
         const handlePreviousPage = () => {
-                if(currentPage > 1) {
-                        setCurrentPage(currentPage - 1)
+                if (currentPage > 1) {
+                        setCurrentPage(currentPage - 1);
                 }
-        }
-
-        const filterNFTs = nftsMarketPlace.filter(nft => {
-                nft.title.toLowerCase().includes(searchQuery.toLowerCase());
-        });
-        console.log(filterNFTs);
-
-        return (
+        };
+        return ( 
                 <>
                         <div className="gradient-bg-section2">
                                 <div>
