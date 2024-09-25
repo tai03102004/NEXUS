@@ -1,8 +1,6 @@
 import { AiOutlineSearch } from "react-icons/ai";
+import { HeadlineProps } from "../../Interface/SearchQuery";
 
-interface HeadlineProps {
-    setSearchQuery: (query: string) => void;
-}
 
 function Headline({setSearchQuery} : HeadlineProps) {
 

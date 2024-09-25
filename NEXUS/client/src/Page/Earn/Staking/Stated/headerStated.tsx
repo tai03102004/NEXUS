@@ -1,4 +1,6 @@
-const HeaderStated = () => {
+import { HeadlineProps } from "../../../../Interface/SearchQuery";
+
+const HeaderStated = ({setSearchQuery} : HeadlineProps) => {
     return (
         <>
             <div className="px-[25px] bg-[rgba(247,247,248,0.13)] py-[30px]">
@@ -8,7 +10,9 @@ const HeaderStated = () => {
                         <div className="text-sm text-neutral-400 mb:text-4xs">Get benefits from staking your tokens</div>
                     </div>
                     <div className="h-10 flex-row items-center rounded-lg border border-[#eef3fb42] bg-dark-gunmetal-400 desktop:w-56 flex w-56 ">
-                        <input placeholder="Search" className="h-full w-full flex-grow border border-none bg-transparent pl-[15px] text-2sm font-normal leading-normal text-white placeholder-neutral-100 outline-none"/>
+                        <input placeholder="Search" className="h-full w-full outline-none bg-transparent pl-[15px] text-2sm font-normal text-white placeholder-neutral-100"
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                        />
                         <span className="cursor-text px-3.5" role="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-search h-5 w-5 cursor-text stroke-[1.7] text-neutral-300"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
                         </span>
                     </div>

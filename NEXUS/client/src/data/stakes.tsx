@@ -1,0 +1,48 @@
+const stakesData = [
+    {
+        stringImage: "https://testnet.elys.network/tokens/usdc.svg",
+        title: "USDC Earn",
+        subtitle: "USDC, EDEN Rewards",
+        apr: "47.21%",
+        avaiable1: "$0.00",
+        avaiable2: "0",
+        staked1: "$0.00",
+        staked2: "0",
+        rewards: "$0.00",
+    },
+    {
+        stringImage: "https://testnet.elys.network/tokens/elys.svg",
+        title: "Elys Staking",
+        subtitle: "USDC, EDEN, EDEN BOOST Rewards",
+        apr: "30%",
+        avaiable1: "$7.64",
+        avaiable2: "0",
+        staked1: "$------",
+        staked2: "------",
+        rewards: "$0.00",
+    },
+    {
+        stringImage: "https://testnet.elys.network/tokens/eden.svg",
+        title: "Eden Commitment",
+        subtitle: "USDC, EDEN, EDEN BOOST Rewards",
+        apr: "30%",
+        avaiable1: "$0.00",
+        avaiable2: "0",
+        staked1: "$0.00",
+        staked2: "0",
+        rewards: "$0.00",
+    },
+    {
+        stringImage: "https://testnet.elys.network/tokens/eden-boost.svg",
+        title: "EDEN BOOST Commitment",
+        subtitle: "USDC, EDEN Rewards",
+        apr: "30%",
+        avaiable1: "0",
+        avaiable2: "",
+        staked1: "0",
+        staked2: "",
+        rewards: "$0.00",
+    },
+];
+
+export default stakesData;
