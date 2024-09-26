@@ -31,11 +31,6 @@ function Welcome() {
     console.log(isConnected, chainId);
 
 
-    const handleConnectWallet = async () => {
-        
-    };
-
-    handleConnectWallet;
 
     return (
         <div className = "flex w-full justify-center">
@@ -114,7 +109,7 @@ function Welcome() {
                             false ? (
                                 <Loader/>
                             ) : (
-                                <button type="button" onClick={handleConnectWallet}
+                                <button type="button" 
                                     className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c] rounded-full cursor-pointer"
                                 >
                                     Send Now

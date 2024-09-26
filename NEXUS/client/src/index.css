@@ -23,7 +23,8 @@ body {
 }
 
 .gradient-bg-section2 {
-    background-color: #312d2d;
+    background-color: #000000ee;
+    background-image: radial-gradient(at 0% 0%, hsl(0, 29%, 8%) 0, transparent 50%), radial-gradient(at 50% 0%, hsl(220, 21%, 11%) 0, transparent 50%), radial-gradient(at 100% 0%, rgb(26, 16, 16) 0, transparent 50%);
 }
 
 .gradient-bg-card {
