@@ -38,7 +38,7 @@ function ArtistDetail() {
                         <div></div>
                         <div className="grid lg:grid-cols-3 grid-cols-1 gap-[30px] mx-[120px] lg:pb-[80px] pb-[60px]">
                                 {displayNFTs.map((nfts,index) => (
-                                    <Link to={`/NFT_Marketpace/${nfts.id}`} >
+                                    <Link to={`/NFT_Marketplace/${nfts.id}`} >
                                         <ServiceCard 
                                             key={index}
                                             avatar={nfts.avatar}

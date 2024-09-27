@@ -25,7 +25,7 @@ function App() {
           <Route element={<LayoutDefault />}>
             <Route path="/" element={<Home />} />
             <Route path="Native_Token" element={<NEXToken />} />
-            <Route path="NFT_Marketpace">
+            <Route path="NFT_Marketplace">
               <Route index element={<Market />} />
               <Route path=":id" element={<NFTItem />} />
             </Route>

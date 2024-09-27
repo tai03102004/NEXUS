@@ -47,7 +47,7 @@ function Section2({ searchQuery }: Section2Props) {
                                         </div>
                                         <div className="grid lg:grid-cols-3 grid-cols-1 gap-[30px] mx-[120px] lg:pb-[80px] pb-[60px]">
                                                 {displayNFTs.map((nfts,index) => (
-                                                        <Link to={`/NFT_Marketpace/${index}`}>
+                                                        <Link to={`/NFT_Marketplace/${index}`}>
                                                                 <ServiceCard 
                                                                         key={index}
                                                                         avatar={nfts.avatar}
