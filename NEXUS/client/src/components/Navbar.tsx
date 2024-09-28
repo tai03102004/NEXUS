@@ -5,6 +5,7 @@ import { NavbarItemProps } from "../Interface/NavbarItemProps.tsx";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Wallet from "../Page/Wallet/index.tsx";
+import { useWeb3ModalAccount } from "@web3modal/ethers/react";
 
 const NarbarItems = (props: NavbarItemProps) => {
     const { title = "", classProps = "" } = props;
@@ -20,6 +21,8 @@ function NavBar() {
     const [toggleMenu, setToggleMenu] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const [walletOpen, setWalletOpen] = useState(false);
+
+    const {isConnected } = useWeb3ModalAccount();
 
     const menuItem = ["Native Token", "NFT Marketplace", "Earn", "Wallets"];
 
@@ -55,7 +58,7 @@ function NavBar() {
                         );
                     } else if (item === "Wallets") {
                         return (
-                            <li
+                            <li 
                                 key={index}
                                 className="relative mx-4 cursor-pointer md:text-[17px] text-[16px] font-genos font-ssemibold hover:text-[#fe9595]"
                                 onClick={() => setWalletOpen(!walletOpen)}
@@ -93,9 +96,18 @@ function NavBar() {
             </div>
 
             {/* Wallet Sidebar */}
-            {walletOpen && (
-                <>
-                    <Wallet setWalletOpen={setWalletOpen}/>
+            
+            {walletOpen && (<>
+                    {isConnected ? (
+                        <Wallet setWalletOpen={setWalletOpen}/>
+                    ) : (
+                        <div>
+                            <div className="fixed inset-0 bg-black bg-opacity-50 z-40 cursor-not-allowed" onClick={() => setWalletOpen(false)}></div>
+                            <div className="fixed z-20 top-0 right-0 p-4 w-[300px] h-screen bg-gray-800 shadow-xl text-white">
+                                <p className="text-center text-lg">Please connect your wallet to view this page.</p>
+                            </div>
+                        </div>
+                    )}
                 </>
             )}
 
